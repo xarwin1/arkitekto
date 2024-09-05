@@ -9,7 +9,7 @@ def hasInternetConnection():
 
 
 def isDonePartitioning(response):
-	if response == "Yes" || response == "yes":
+	if response == "Yes" or response == "yes":
 		return True
 	else:
 		return False
