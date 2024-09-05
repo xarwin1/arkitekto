@@ -23,7 +23,7 @@ addUser()
 giveUserSudo()
 
 print("Installing extra packages")
-installExtraPackages()
+installExtraPkgs()
 
 print("Enabling startup services")
 enableServices()
