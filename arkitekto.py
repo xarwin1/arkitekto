@@ -33,7 +33,7 @@ def pacmanKeyInit():
 	os.system("pacman-key --populate archlinux")
 
 def installSystem():
-	os.system("pacstrap -K /mnt base base-devel linux linux-headers linux-firmware vim grub efibootmgr networkmanager nvim")
+	os.system("pacstrap -K /mnt base base-devel linux linux-headers linux-firmware vim grub efibootmgr networkmanager neovim")
 	os.system("genfstab -U /mnt >> /mnt/etc/fstab")
 	os.system("cp -r arkitekto/ /mnt/arkitekto/")
 
