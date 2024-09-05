@@ -33,7 +33,7 @@ def pacmanKeyInit():
 	os.system("pacman-key --populate archlinux")
 
 def installSystem():
-	os.system("pacstrap -K /mnt base base-devel linux linux-headers linux-firmware vim grub efibootmgr networkmanager neovim")
+	os.system("pacstrap -K /mnt base base-devel linux linux-headers python linux-firmware vim grub efibootmgr networkmanager neovim")
 	os.system("genfstab -U /mnt >> /mnt/etc/fstab")
 	os.system("cp -r /root/arkitekto/ /mnt/arkitekto/")
 
@@ -67,6 +67,6 @@ def enableServices():
     	os.system("systemctl enable bluetooth cups NetworkManager gdm")
 
 def installBootloader():
-    	os.system("grub-install --target=x86_64-efi --target-directory=/boot --bootloader-id=GRUB")
+    	os.system("grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB")
     	os.system("grub-mkconfig -o /boot/grub/grub.cfg")
 
