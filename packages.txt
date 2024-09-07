@@ -1,1 +1,1 @@
-gdm bluez cups hyprland
+gdm bluez cups hyprland git fastfetch ttf-noto-fonts-cjk
